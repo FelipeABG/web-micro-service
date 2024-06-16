@@ -45,8 +45,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-.create-form,
-.retrieve-form {
+.form {
   display: flex;
   margin-top: 30px;
   flex-direction: column;
@@ -54,15 +53,13 @@ body {
   gap: 10px;
 }
 
-.create-form-container p,
-.retrieve-form-container p {
+.form-container p {
   margin: 0;
   font-size: 20px;
 }
 
 
-.create-form-container input,
-.retrieve-form-container input {
+.form-container input {
   width: 300px;
   height: 40px;
   border-radius: 10px;
@@ -86,11 +83,8 @@ body {
 }
 
 
-.create-message {
-  text-align: center;
-}
 
-.retrieve-message {
+.message {
   display: flex;
   flex-direction: column;
   align-items: center;

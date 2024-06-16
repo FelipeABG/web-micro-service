@@ -16,22 +16,22 @@
   <div class="main-module">
     <h1>Create User</h1>
     <div class="main-module-content">
-      <form class="create-form">
-        <div class="create-form-container">
+      <form class="create-form form">
+        <div class="form-container">
           <p>Username</p>
           <input required type="text" name="username">
         </div>
-        <div class="create-form-container">
+        <div class="form-container">
           <p>Email</p>
           <input required type="text" name="email">
         </div>
-        <div class="create-form-container">
+        <div class="form-container">
           <p>Password</p>
           <input required type="password" name="password">
         </div>
         <input type="button" onclick="addUser()" name="create-button" value="Submit" class="create-button">
       </form>
-      <div class="create-message">
+      <div class="create-message message">
       </div>
     </div>
   </div>
@@ -39,14 +39,14 @@
   <div class="main-module">
     <h1> Retrieve User</h1>
     <div class="main-module-content">
-      <form class="retrieve-form">
-        <div class="retrieve-form-container">
+      <form class="retrieve-form form">
+        <div class="form-container">
           <p>User ID</p>
           <input type="text" name="userId">
         </div>
         <input type="button" class="retrieve-button" onclick="searchUser()" value="Search">
       </form>
-      <div class="retrieve-message">
+      <div class="retrieve-message message">
 
       </div>
     </div>
@@ -55,14 +55,22 @@
   <div class="main-module">
     <h1> Update User</h1>
     <div class="main-module-content">
-
     </div>
   </div>
 
   <div class="main-module">
     <h1>Delete User</h1>
     <div class="main-module-content">
+      <form class="delete-form form">
+        <div class="form-container">
+          <p>User ID</p>
+          <input type="text" name="userId">
+        </div>
+        <input type="button" class="retrieve-button" onclick="deleteUser()" value="Search">
+      </form>
+      <div class="delete-message message">
 
+      </div>
     </div>
   </div>
 

@@ -37,3 +37,19 @@ async function searchUser() {
   }
 
 }
+
+async function deleteUser() {
+  let form = document.querySelector(".delete-form")
+  let div = document.querySelector(".delete-message")
+
+  let data = new FormData(form)
+
+  let promise = await fetch("http://localhost:8080/web_microservice_war_exploded/user", {
+    method: "DELETE",
+    body: data
+  })
+
+  let result = await promise.text()
+  div.innerText = result
+
+}

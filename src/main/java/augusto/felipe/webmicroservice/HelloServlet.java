@@ -31,12 +31,13 @@ public class HelloServlet extends HttpServlet {
             PrintWriter out = response.getWriter();
             out.println("User created successfully");
         }else{
-
             response.setContentType("application/json");
             response.setCharacterEncoding("UTF-8");
+
             Long id = Long.parseLong(request.getParameter("userId"));
             User u = this.userService.getUserById(id);
             String jsonUser = gson.toJson(u);
+
             PrintWriter out = response.getWriter();
             out.println(jsonUser);
             out.flush();
@@ -45,7 +46,13 @@ public class HelloServlet extends HttpServlet {
 
     protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {}
 
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {}
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Long id = Long.parseLong(request.getParameter("userId"));
+        this.userService.deleteUser(id);
+        response.setContentType("text/plain");
+        PrintWriter out = response.getWriter();
+        out.println("User deleted successfully");
+    }
 
 
 
