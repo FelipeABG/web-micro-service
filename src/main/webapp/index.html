@@ -29,7 +29,7 @@
           <p>Password</p>
           <input required type="password" name="password">
         </div>
-        <input type="button" onclick="addUser()" name="create-button" value="Submit" class="create-button">
+        <input type="button" onclick="addUser()" value="Create" class="button">
       </form>
       <div class="create-message message">
       </div>
@@ -44,7 +44,7 @@
           <p>User ID</p>
           <input type="text" name="userId">
         </div>
-        <input type="button" class="retrieve-button" onclick="searchUser()" value="Search">
+        <input type="button" class="button" onclick="searchUser()" value="Search">
       </form>
       <div class="retrieve-message message">
 
@@ -55,6 +55,29 @@
   <div class="main-module">
     <h1> Update User</h1>
     <div class="main-module-content">
+      <form class="update-form form">
+
+        <div class="form-container">
+          <p>User ID</p>
+          <input required type="text" name="userId">
+        </div>
+        <div class="form-container">
+          <p>Username</p>
+          <input required type="text" name="username">
+        </div>
+        <div class="form-container">
+          <p>Email</p>
+          <input required type="text" name="email">
+        </div>
+        <div class="form-container">
+          <p>Password</p>
+          <input required type="password" name="password">
+        </div>
+        <input type="button" onclick="updateUser()" value="Update" class="button">
+      </form>
+      <div class="update-message message">
+
+      </div>
     </div>
   </div>
 
@@ -66,7 +89,7 @@
           <p>User ID</p>
           <input type="text" name="userId">
         </div>
-        <input type="button" class="retrieve-button" onclick="deleteUser()" value="Search">
+        <input type="button" class="button" onclick="deleteUser()" value="Delete">
       </form>
       <div class="delete-message message">
 

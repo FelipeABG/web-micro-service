@@ -66,8 +66,7 @@ body {
   border: 2px solid var(--dark-gray);
 }
 
-.create-button,
-.retrieve-button {
+.button {
   color: white;
   width: 310px;
   font-size: 20px;
@@ -77,8 +76,7 @@ body {
   border: 2px solid var(--dark-gray);
 }
 
-.create-button:hover,
-.retrieve-button:hover {
+.button:hover {
   background-color: grey;
 }
 

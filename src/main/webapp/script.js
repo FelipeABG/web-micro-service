@@ -53,3 +53,19 @@ async function deleteUser() {
   div.innerText = result
 
 }
+
+async function updateUser() {
+  let form = document.querySelector(".update-form")
+  let div = document.querySelector(".update-message")
+
+  let data = new FormData(form)
+
+  let promise = await fetch("http://localhost:8080/web_microservice_war_exploded/user", {
+    method: "PUT",
+    body: data
+  })
+
+  let result = await promise.text()
+  div.innerHTML = result
+}
+

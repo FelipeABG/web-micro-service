@@ -44,14 +44,37 @@ public class HelloServlet extends HttpServlet {
         }
     }
 
-    protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {}
+    protected void doPut(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        String email = request.getParameter("email");
+        String userId = request.getParameter("userId");
 
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Long id = Long.parseLong(request.getParameter("userId"));
-        this.userService.deleteUser(id);
         response.setContentType("text/plain");
         PrintWriter out = response.getWriter();
-        out.println("User deleted successfully");
+
+        if (this.userService.getUserById(Long.parseLong(userId)) == null) {
+            out.println("User not found");
+        }
+        else{
+            User user = new User(username, password, email);
+            this.userService.updateUser(user);
+            out.println("User updated successfully");
+        }
+    }
+
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        PrintWriter out = response.getWriter();
+        response.setContentType("text/plain");
+
+        Long id = Long.parseLong(request.getParameter("userId"));
+        if (this.userService.getUserById(id) == null) {
+            out.println("User not found");
+        }
+        else {
+            this.userService.deleteUser(id);
+            out.println("User deleted successfully");
+        }
     }
 
 
