@@ -2,57 +2,58 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Home</title>
 </head>
 
 <body class="main-container">
 
-<div class="main-module">
+  <div class="main-module">
     <h1>Create User</h1>
     <div class="main-module-content">
-        <form class="create-form">
-            <div class="create-form-container">
-                <p>Username</p>
-                <input type="text" name="username">
-            </div>
-            <div class="create-form-container">
-                <p>Email</p>
-                <input type="text" name="email">
-            </div>
-            <div class="create-form-container">
-                <p>Password</p>
-                <input type="password" name="password">
-            </div>
-            <input type="button" name="create-button" value="Submit" class="create-button">
-        </form>
+      <form class="create-form">
+        <div class="create-form-container">
+          <p>Username</p>
+          <input required type="text" name="username">
+        </div>
+        <div class="create-form-container">
+          <p>Email</p>
+          <input required type="text" name="email">
+        </div>
+        <div class="create-form-container">
+          <p>Password</p>
+          <input required type="password" name="password">
+        </div>
+        <input type="button" onclick="addUser()" name="create-button" value="Submit" class="create-button">
+      </form>
     </div>
-</div>
+  </div>
 
-<div class="main-module">
+  <div class="main-module">
     <h1> Retrieve User</h1>
     <div class="main-module-content">
 
     </div>
-</div>
+  </div>
 
-<div class="main-module">
+  <div class="main-module">
     <h1> Update User</h1>
     <div class="main-module-content">
 
     </div>
-</div>
+  </div>
 
-<div class="main-module">
+  <div class="main-module">
     <h1>Delete User</h1>
     <div class="main-module-content">
 
     </div>
-</div>
+  </div>
 
 </body>
 
